@@ -35,3 +35,20 @@ sequenceDiagram
 
 ```
 
+### Circuit
+ - A representation of a computation in zk-SNARKs, involving inputs, operations, and outputs.
+
+ ### Compile
+ - Transforming the circuit into a set of mathematical constraints for the zero-knowledge proof.
+
+ ### Setup
+ - Generating proving and verification keys based on the compiled circuit.
+
+ ### Witness 
+ - A solution to the circuit's constraints, consisting of both public and secret inputs.
+
+ ### Prove
+- Creating a proof that a valid witness is known, without revealing any information about the witness.
+
+### Verify
+- Checking if a proof is valid without learning anything about the witness.
