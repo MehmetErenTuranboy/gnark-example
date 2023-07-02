@@ -20,7 +20,7 @@ type MyCircuit struct {
 // the witness must satisfy to create a valid zk-SNARK.
 func (circuit *MyCircuit) Define(api frontend.API) error {
 	cubedX := api.Mul(circuit.X, circuit.X, circuit.X) // Compute X**3
-	api.AssertIsEqual(circuit.Y, api.Add(cubedX, circuit.X, 5)) // Assert that X**3 + X + 5 == Y
+	api.AssertIsEqual(circuit.Y, api.Add(cubedX, circuit.X, 7)) // Assert that X**3 + X + 7 == Y
 	return nil
 }
 
@@ -40,7 +40,7 @@ func main() {
 	}
 
 	// Define the witness
-	assignment := MyCircuit{X: 3, Y: 35}
+	assignment := MyCircuit{X: 4, Y: 75}
 
 	// Create a witness from the assignment
 	witness, err := frontend.NewWitness(&assignment, ecc.BN254)
